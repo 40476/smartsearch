@@ -7,8 +7,8 @@
 
 <script>
   try{
-    var s;if(!new URL(document.location).searchParams.get('q')==='sconfig'){s=true}else{s=false}
-    var imagetypes=['png','jpg','svg','jpeg','webp','gif','clipart','icon','image'],q=new URL(document.location).searchParams.get('q');
+    if(!new URL(document.location).searchParams.get('q')==='sconfig'){s=true}else{s=false}
+    var s,imagetypes=['png','jpg','svg','jpeg','webp','gif','clipart','icon','image'],q=new URL(document.location).searchParams.get('q');
     
     /*image?*/if(!s){for(var i=0;i<imagetypes.length;i++){if(q.includes(imagetypes[i])){s=true;document.location=`https://www.google.com/search?q=${q}&tbm=isch`;}}}
     if(!s){document.location=`https://www.bing.com/search?q=${q}`;}
